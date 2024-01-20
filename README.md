@@ -1,18 +1,19 @@
 # Control-visitas
-Aplicación android que permite gestionar las visitas de un condominio, enviando alertas a vecino que visitaran
+Aplicación Android que permite gestionar las visitas de un condominio, enviando alertas a vecinos que serán visitados.
 
-# Caracteristicas
--Permite a los residentes avisar que los visitaran
--Notificaciones push a los residentes de visita en camino
--base de datos de visitas
--version para visitas/guardia de garita
+## Características
 
-# Especificaciones 
-Lenguaje: Kotlin
-SO: Android
-Base de datos:Firebase
-IDE:Android Studio
+- Permite a los residentes avisar que los visitarán
+- Notificaciones push a los residentes de visita en camino
+- Base de datos de visitas
+- Versión para visitas/guardia de garita
 
-# Versiones
-## Version 0.1
->Aplicación base funcional
+## Especificaciones 
+- Lenguaje: Kotlin
+- SO: Android
+- Base de datos: Firebase
+- IDE: Android Studio
+
+## Versiones
+### Version 0.1
+- Aplicación base funcional
