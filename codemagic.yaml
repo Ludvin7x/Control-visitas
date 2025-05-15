@@ -1,0 +1,11 @@
+workflows:
+  android-release:
+    name: Build Android Release APK
+    max_build_duration: 60
+    environment:
+      vars:
+        GRADLE_TASK: assembleRelease
+    scripts:
+      - ./gradlew $GRADLE_TASK
+    artifacts:
+      - app/build/outputs/apk/release/app-release.apk
