@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">garita</string>
+    <string name="usuario">Usuario</string>
+    <string name="visita_programada">Visita programada</string>
+    <string name="textview">TextView</string>
+    <string name="placa">Placa</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="nombre">Nombre</string>
+    <string name="codigo_de_acceso">Codigo de Acceso:</string>
+    <string name="textview_codigo">TextView</string>
+    <string name="textview_placaVisitor">TextView</string>
+    <string name="textView14">Estado:</string>
+    <string name="textview_estadoR">TextView</string>
+    <string name="programar_visita">Programar visita</string>
+    <string name="textView_instrucciones">Instrucciones: dale este codigo de acceso a tu visita, se le pedira en garita</string>
+    <string name="agregar_placa">Agregar</string>
+    <string name="textview_nombreuser_placaSC">TextView</string>
+    <string name="text_nombre_placaSC">Nombre</string>
+    <string name="text_placa_placaSC">Placa</string>
+    <string name="ingrese_nombre_de_la_visita">Ingrese Nombre de la visita</string>
+    <string name="ingrese_la_placa_del_vehiculo">Ingrese la Placa del Vehiculo</string>
+    <string name="textview_titulo_placaSC">TextView</string>
+    <string name="boton_cancela_placaSC">Cancelar</string>
+    <string name="text_error_morosoSC">¡Error!</string>
+    <string name="text_pendientepago_morosoSC">Usted esta pendiente de pago</string>
+    <string name="boton_salir_morosoSC">Salir</string>
+    <string name="favor_ponerse_al_dia_para_utilizar_esta_app">Favor ponerse al dia para utilizar esta app</string>
+    <string name="text_correo_loginSC">Correo:</string>
+    <string name="ingrese_email_loginSC">Ingrese Email</string>
+    <string name="ingrese_el_codigo_dado_por_la_visita">Ingrese el codigo dado por la visita</string>
+</resources>
