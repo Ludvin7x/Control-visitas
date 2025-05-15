@@ -8,7 +8,7 @@ workflows:
         - signing
       vars:
         GRADLE_TASK: assembleRelease
-        KEYSTORE_PATH: keystore.jks   # solo nombre, archivo en raíz
+        KEYSTORE_PATH: keystore.jks
     scripts:
       - echo "🔓 Decodificando keystore..."
       - echo $KEYSTORE_BASE64 | base64 --decode > $KEYSTORE_PATH
@@ -21,7 +21,8 @@ workflows:
       - chmod +x ./gradlew
 
       - echo "🚀 Iniciando compilación..."
-      - ./gradlew $GRADLE_TASK \
+      - |
+        ./gradlew $GRADLE_TASK \
           -Pandroid.injected.signing.store.file=$KEYSTORE_PATH \
           -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
           -Pandroid.injected.signing.key.alias=$KEY_ALIAS \
