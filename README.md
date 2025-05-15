@@ -1,19 +1,37 @@
-# Control-visitas
-Aplicación Android que permite gestionar las visitas de un condominio, enviando alertas a vecinos que serán visitados.
+# Control-Visitas
 
-## Características
+**Control-Visitas** is an Android application designed to efficiently manage visitor access in residential condominiums by sending timely alerts to residents about incoming visits.
 
-- Permite a los residentes avisar que los visitarán
-- Notificaciones push a los residentes de visita en camino
-- Base de datos de visitas
-- Versión para visitas/guardia de garita
+## Features
 
-## Especificaciones 
-- Lenguaje: Kotlin
-- SO: Android
-- Base de datos: Firebase
-- IDE: Android Studio
+- Residents can notify about expected visitors in advance.
+- Real-time push notifications to residents when visitors are on their way.
+- Comprehensive visitor database for tracking and management.
+- Dedicated version tailored for security guards at the gate.
 
-## Versiones
+## Technical Specifications
+
+- **Programming Language:** Kotlin  
+- **Platform:** Android  
+- **Database:** Firebase Realtime Database  
+- **Development Environment:** Android Studio
+
+## Version History
+
 ### Version 0.1
-- Aplicación base funcional
+
+- Initial functional release of the base application.
+
+## Getting Started
+
+This project is intended for demonstration purposes as part of a portfolio. To build and run the application locally, ensure you have the following:
+
+- Android Studio installed.
+- Firebase project configured and connected to the app.
+- Android device or emulator for testing.
+
+Build the project using Android Studio and deploy it to your device or emulator.
+
+---
+
+Thank you for reviewing my project.
