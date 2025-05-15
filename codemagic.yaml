@@ -4,17 +4,23 @@ workflows:
     max_build_duration: 60
     environment:
       groups:
-        - firebase  # Asegúrate que este sea el nombre correcto del grupo
+        - firebase
+        - signing
       vars:
         GRADLE_TASK: assembleRelease
+        KEYSTORE_PATH: keystore.jks
     scripts:
-      - echo "Granting execute permission to gradlew"
+      - echo "🔓 Decodificando keystore..."
+      - echo $KEYSTORE_BASE64 | base64 --decode > $KEYSTORE_PATH
+      - echo "🛠️ Otorgando permisos..."
       - chmod +x ./gradlew
-      - echo "Restoring google-services.json from base64 variable..."
-      - echo $GOOGLE_SERVICES_JSON | base64 --decode > app/google-services.json
-      - echo "Starting Gradle build..."
-      - ./gradlew $GRADLE_TASK
-      - echo "Listing APK files:"
+      - echo "🚀 Iniciando compilación..."
+      - ./gradlew $GRADLE_TASK \
+          -Pandroid.injected.signing.store.file=$KEYSTORE_PATH \
+          -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
+          -Pandroid.injected.signing.key.alias=$KEY_ALIAS \
+          -Pandroid.injected.signing.key.password=$KEY_PASSWORD
+      - echo "✅ APK compilado, listando archivos..."
       - find app/build/outputs/apk/
     artifacts:
-      - app/build/outputs/apk/release/app-release-unsigned.apk
+      - app/build/outputs/apk/release/app-release.apk
