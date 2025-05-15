@@ -13,4 +13,5 @@ workflows:
       - echo "Listing APK files:"
       - find app/build/outputs/apk/
     artifacts:
-      - app/build/outputs/apk/release/app-release.apk
+    - app/build/outputs/apk/release/app-release-unsigned.apk
+
