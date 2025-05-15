@@ -6,6 +6,9 @@ workflows:
       vars:
         GRADLE_TASK: assembleRelease
     scripts:
+      - echo "Granting execute permission to gradlew"
+      - chmod +x ./gradlew
+      - echo "Starting Gradle build..."
       - ./gradlew $GRADLE_TASK
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
