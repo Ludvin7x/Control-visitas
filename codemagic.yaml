@@ -8,7 +8,7 @@ workflows:
         - signing
       vars:
         GRADLE_TASK: assembleRelease
-        KEYSTORE_PATH: keystore.jks    # Solo el nombre, porque gradle buscará dentro de app/
+        KEYSTORE_PATH: keystore.jks
     scripts:
       - echo "🔓 Decodificando keystore..."
       - echo $KEYSTORE_BASE64 | base64 --decode > app/$KEYSTORE_PATH
@@ -25,8 +25,10 @@ workflows:
 
       - echo "🚀 Iniciando compilación..."
       - |
+        KEYSTORE_ABS_PATH="$(pwd)/app/$KEYSTORE_PATH"
+        echo "Usando keystore en ruta absoluta: $KEYSTORE_ABS_PATH"
         ./gradlew $GRADLE_TASK \
-          -Pandroid.injected.signing.store.file=../app/$KEYSTORE_PATH \
+          -Pandroid.injected.signing.store.file=$KEYSTORE_ABS_PATH \
           -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
           -Pandroid.injected.signing.key.alias=$KEY_ALIAS \
           -Pandroid.injected.signing.key.password=$KEY_PASSWORD
