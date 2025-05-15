@@ -3,15 +3,18 @@ workflows:
     name: Build Android Release APK
     max_build_duration: 60
     environment:
+      groups:
+        - firebase  # Asegúrate que este sea el nombre correcto del grupo
       vars:
         GRADLE_TASK: assembleRelease
     scripts:
       - echo "Granting execute permission to gradlew"
       - chmod +x ./gradlew
+      - echo "Restoring google-services.json from base64 variable..."
+      - echo $GOOGLE_SERVICES_JSON | base64 --decode > app/google-services.json
       - echo "Starting Gradle build..."
       - ./gradlew $GRADLE_TASK
       - echo "Listing APK files:"
       - find app/build/outputs/apk/
     artifacts:
-    - app/build/outputs/apk/release/app-release-unsigned.apk
-
+      - app/build/outputs/apk/release/app-release-unsigned.apk
