@@ -8,9 +8,10 @@ workflows:
         - signing
       vars:
         GRADLE_TASK: assembleRelease
-        KEYSTORE_PATH: keystore.jks
+        KEYSTORE_PATH: app/keystore.jks
     scripts:
       - echo "🔓 Decodificando keystore..."
+      - mkdir -p app
       - echo $KEYSTORE_BASE64 | base64 --decode > $KEYSTORE_PATH
       
       - echo "🔓 Decodificando google-services.json..."
