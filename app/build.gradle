@@ -21,12 +21,12 @@ android {
     signingConfigs {
         release {
             def keystorePath = System.getenv("KEYSTORE_PATH") ?: "keystore.jks"
-            storeFile file(keystorePath)  // ahora puede recibir "app/keystore.jks"
+            storeFile file(keystorePath)
             storePassword System.getenv("KEYSTORE_PASSWORD") ?: "tuPassword"
             keyAlias System.getenv("KEY_ALIAS") ?: "tuAlias"
             keyPassword System.getenv("KEY_PASSWORD") ?: "tuPassword"
         }
-    }  
+    }
 
     buildTypes {
         release {

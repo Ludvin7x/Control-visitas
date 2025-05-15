@@ -8,7 +8,7 @@ workflows:
         - signing
       vars:
         GRADLE_TASK: assembleRelease
-        KEYSTORE_PATH: app/keystore.jks
+        KEYSTORE_PATH: app/keystore.jks   # ruta dentro de app/
     scripts:
       - echo "🔓 Decodificando keystore..."
       - mkdir -p app
