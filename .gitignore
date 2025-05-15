@@ -1,15 +1,69 @@
+# Firebase config
+app/google-services.json
+
+# Android Studio
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/caches/
+.gradle/daemon/
+.gradle/native/
+.gradle/taskHistory/
+.gradle/wrapper/dists/
+
+# Local config
 local.properties
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Generated files
+captures/
+output.json
+*.apk
+*.ap_
+*.dex
+*.so
+*.map
+*.hprof
+
+# Backup files
+*.orig
+*.bak
+*.tmp
+*.swp
+*~.nib
+
+# NDK
+obj/
+
+# Android Test Results
+test-results/
+test-output/
+
+# Crashlytics/Firebase
+crashlytics-build.properties
+fabric.properties
+
+# Jetpack Compose
+compose-metrics/
+compose-logs/

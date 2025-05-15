@@ -10,5 +10,7 @@ workflows:
       - chmod +x ./gradlew
       - echo "Starting Gradle build..."
       - ./gradlew $GRADLE_TASK
+      - echo "Listing APK files:"
+      - find app/build/outputs/apk/
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
